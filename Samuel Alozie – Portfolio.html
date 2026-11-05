@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Samuel Alozie – Computer Engineering Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#EDF2F6;--grid:#D5DFE8;--ink:#0F2438;--muted:#4B6075;--line:#B9C7D4;--accent:#0A7F86;--accent-ink:#FFFFFF;--panel:#F8FAFC;
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1A26;--grid:#162636;--ink:#E6EEF5;--muted:#9BB0C3;--line:#2B4156;--accent:#4FD1D6;--accent-ink:#06222A;--panel:#13222F;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1A26;--grid:#162636;--ink:#E6EEF5;--muted:#9BB0C3;--line:#2B4156;--accent:#4FD1D6;--accent-ink:#06222A;--panel:#13222F;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background-color:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.6;font-size:17px;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+header.hero{padding:72px 0 48px}
+h1{font-size:clamp(3rem,10vw,6.5rem);font-weight:800;letter-spacing:-.03em}
+.role{font-size:1.25rem;color:var(--muted);margin:16px 0 0;max-width:34ch}
+.trace{width:100%;height:90px;margin-top:32px;display:block}
+.trace path{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-linejoin:round}
+.trace .ref{stroke:var(--line);stroke-width:1;stroke-dasharray:4 5}
+.contact{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:24px;font-weight:500}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-size:1.9rem;font-weight:700;margin-bottom:24px}
+.about{max-width:68ch}
+.project{display:grid;grid-template-columns:1fr 1.6fr;gap:16px 40px;padding:32px 0;border-top:1px solid var(--line)}
+.project:first-of-type{border-top:0;padding-top:0}
+h3{font-size:1.45rem;font-weight:700}
+.kind{color:var(--muted);margin:8px 0 12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;list-style:none}
+.tags li{background:var(--accent);color:var(--accent-ink);padding:2px 10px;border-radius:99px;font-size:.85rem;font-weight:500}
+.project ul{margin:0;padding-left:1.1em}
+.project li{margin-bottom:10px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+.skills dt{font-weight:500;margin-top:14px}
+.skills dd{margin:2px 0 0;color:var(--muted)}
+.skills dt:first-child{margin-top:0}
+.role-row{margin-bottom:22px}
+.role-row p{margin:4px 0;color:var(--muted)}
+.role-row strong{color:var(--ink)}
+footer{padding:32px 0 48px;color:var(--muted);border-top:1px solid var(--line)}
+@media (max-width:720px){.project{grid-template-columns:1fr}body{font-size:16px}header.hero{padding-top:48px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <h1>Samuel Alozie</h1>
+  <p class="role">Computer Engineering student building backend systems, databases and embedded hardware.</p>
+  <svg class="trace" viewBox="0 0 900 90" preserveAspectRatio="none" role="img" aria-label="Decorative filter response curve">
+    <line class="ref" x1="0" y1="20" x2="900" y2="20"/>
+    <path d="M0 24 C30 14 50 34 80 20 C110 8 130 34 160 20 C190 8 210 34 240 20 C270 10 300 22 330 20 C360 20 390 24 420 40 C470 62 520 78 600 84 C700 88 800 89 900 89"/>
+  </svg>
+  <div class="contact">
+    <a href="mailto:samuelgp.alozie@gmail.com">samuelgp.alozie@gmail.com</a>
+    <a href="tel:+2349021010488">+234 902 101 0488</a>
+    <span>Lagos, Nigeria</span>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <p class="about">I study Computer Engineering at the University of Lagos with a 4.05 / 5.00 CGPA. I work in Python, SQL, C++ and MATLAB, and I have built embedded systems on Arduino and modeled electronic processes numerically. I’m looking for a Backend Engineering or Database Management internship where I can apply algorithmic problem-solving and database design to scalable software.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <article class="project">
+    <div>
+      <h3>Semi-Autonomous Line-Following Robot</h3>
+      <p class="kind">Designed and built an embedded system</p>
+      <ul class="tags"><li>Arduino</li><li>C/C++</li></ul>
+    </div>
+    <ul>
+      <li>Engineered a semi-autonomous line-following robot with an Arduino microcontroller, IR sensor arrays and motor drivers.</li>
+      <li>Programmed control logic in C/C++ for real-time sensor polling and dynamic directional correction.</li>
+      <li>Assembled, tested and debugged the hardware circuitry to keep latency low and line-tracking accuracy high.</li>
+    </ul>
+  </article>
+
+  <article class="project">
+    <div>
+      <h3>Electronic Band Structure &amp; Carrier Density Simulation</h3>
+      <p class="kind">Computational engineering project</p>
+      <ul class="tags"><li>MATLAB</li><li>Simulink</li></ul>
+    </div>
+    <ul>
+      <li>Developed numerical simulation scripts in MATLAB and Simulink to model the electronic band structure and carrier density of semiconductor nanowires.</li>
+      <li>Solved the underlying quantum physical equations with numerical methods to evaluate dynamic charge distribution.</li>
+      <li>Generated visualization plots to analyze electron behavior under variable operating conditions.</li>
+    </ul>
+  </article>
+
+  <article class="project">
+    <div>
+      <h3>Database Design &amp; Relational Modeling</h3>
+      <p class="kind">Database engineering</p>
+      <ul class="tags"><li>SQL</li><li>Python</li><li>Pandas</li><li>NumPy</li><li>Excel</li></ul>
+    </div>
+    <ul>
+      <li>Structured relational database schemas and wrote custom SQL queries, including joins, aggregations and data filtering.</li>
+      <li>Implemented Python scripts (Pandas and NumPy) and Excel models to parse, clean and process structured datasets.</li>
+      <li>Applied mathematical modeling to turn complex real-world equations into programmatic simulations.</li>
+    </ul>
+  </article>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <dl class="skills cols">
+    <div>
+      <dt>Programming languages</dt><dd>Python, C++, Java, SQL, MATLAB</dd>
+      <dt>Backend and databases</dt><dd>Database design, relational databases (SQL), data structures and algorithms</dd>
+    </div>
+    <div>
+      <dt>Hardware and embedded</dt><dd>Arduino microcontrollers, circuit design and analysis (BJTs), sensor interfacing</dd>
+      <dt>Developer tools</dt><dd>Git, Microsoft Excel (data analysis), Simulink</dd>
+    </div>
+  </dl>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="role-row">
+    <strong>University of Lagos (UNILAG), Lagos, Nigeria</strong>
+    <p>B.Sc. Computer Engineering, Oct 2023 to present. Cumulative GPA 4.05 / 5.00.</p>
+    <p>Coursework: Object-Oriented Programming, Data Structures &amp; Algorithms, Database Management Systems, Circuit Theory &amp; BJT Design, Embedded Systems, Linear Algebra &amp; Matrix Analysis.</p>
+  </div>
+</section>
+
+<section id="leadership">
+  <h2>Leadership and activities</h2>
+  <div class="role-row">
+    <strong>Cowrywise Campus Ambassador</strong>
+    <p>Sept 2025 to present. Helped spread financial literacy across campus, leading engagement strategies for peer groups, campus NGOs and faculty networks. Helped organize workshops and promotional initiatives that encourage digital finance adoption among students.</p>
+  </div>
+  <div class="role-row">
+    <strong>UNILAG Energy Club, member</strong>
+    <p>2026 to present. Collaborated with cross-functional engineering student teams on technical research and energy technology projects.</p>
+  </div>
+</section>
+
+<footer>Want to talk about an internship? Email <a href="mailto:samuelgp.alozie@gmail.com">samuelgp.alozie@gmail.com</a>.</footer>
+</div>
+</body>
+</html>
